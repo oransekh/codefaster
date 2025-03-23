@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeFaster.in</title>
+    <!--link to tailwind css-->
+    <link href="/src/output.css" rel="stylesheet" />
+    <!--link custom css file-->
+    <link rel="stylesheet" href="/src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <header>
+      <!-- Navbar -->
+      <nav
+        class="fixed top-0 w-full bg-white shadow-md p-6 h-20 flex justify-between items-center z-50"
+      >
+        <div class="text-xl font-bold">CodeFaster</div>
+        <button id="menu-btn" class="lg:hidden text-xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="hidden lg:flex space-x-6">
+          <li><a href="#home" class="hover:text-blue-500">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-500">About</a></li>
+
+          <!-- Services Link -->
+          <li class="relative">
+            <a
+              href="#services"
+              id="services-link"
+              class="hover:text-blue-500 flex items-center gap-1"
+            >
+              Services
+              <i
+                class="fa-solid fa-caret-down transition-transform duration-300 hover:rotate-180"
+              ></i>
+            </a>
+          </li>
+
+          <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        </ul>
+        <button
+          class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+        >
+          Call Now
+        </button>
+      </nav>
+      <!-- Mega Menu -->
+      <div
+        id="mega-menu"
+        class="fixed left-0 right-0 top-20 bg-gradient-to-b from-blue-50 to-indigo-50 shadow-2xl opacity-0 invisible transition-all duration-300 transform -translate-y-4 z-40 border-t border-gray-100"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Web Development Card -->
+            <div
+              class="group relative bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+            >
+              <div class="relative h-48">
+                <img
+                  src="/src/img/photo-1534972195531-d756b9bfa9f2.jpg"
+                  alt="Web development"
+                  class="w-full h-full object-cover rounded-t-xl"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"
+                ></div>
+                <span
+                  class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium text-blue-600"
+                >
+                  Development
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Web Development
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Enterprise-grade web solutions for digital transformation
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+                  >
+                    React
+                  </span>
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+                  >
+                    Next.js
+                  </span>
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors"
+                  >
+                    Angular
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile App Development Card -->
+            <div
+              class="group relative bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+            >
+              <div class="relative h-48">
+                <img
+                  src="/src/img/photo-1512941937669-90a1b58e7e9c.jpg"
+                  alt="Mobile development"
+                  class="w-full h-full object-cover rounded-t-xl"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"
+                ></div>
+                <span
+                  class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium text-purple-600"
+                >
+                  Mobile
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Mobile Apps
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Cross-platform mobile solutions with native performance
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors"
+                  >
+                    Flutter
+                  </span>
+                  <span
+                    class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors"
+                  >
+                    React Native
+                  </span>
+                  <span
+                    class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-purple-200 transition-colors"
+                  >
+                    SwiftUI
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Digital Marketing Card -->
+            <div
+              class="group relative bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
+            >
+              <div class="relative h-48">
+                <img
+                  src="/src/img/photo-1432888498266-38ffec3eaf0a.jpg"
+                  alt="Digital marketing"
+                  class="w-full h-full object-cover rounded-t-xl"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent"
+                ></div>
+                <span
+                  class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium text-green-600"
+                >
+                  Marketing
+                </span>
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  Digital Marketing
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Data-driven strategies for brand growth
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
+                  >
+                    SEO
+                  </span>
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
+                  >
+                    PPC
+                  </span>
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-medium hover:bg-green-200 transition-colors"
+                  >
+                    Social Ads
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Section -->
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <div class="mb-4 md:mb-0">
+                <h4 class="text-lg font-semibold text-gray-900">
+                  Need custom solutions?
+                </h4>
+                <p class="text-gray-600">
+                  Let's discuss your unique business requirements
+                </p>
+              </div>
+              <button
+                class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:scale-105 transition-transform"
+              >
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--main body-->
+    <main>
+      <!-- Hero Section -->
+      <section class="pt-32 pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in-up opacity-0">
+            <h1 class="text-5xl font-bold text-slate-800 mb-6 leading-tight">
+              Transform Your Digital
+              <span
+                class="bg-gradient-to-r from-indigo-600 to-emerald-600 bg-clip-text text-transparent"
+                >Presence</span
+              >
+            </h1>
+            <p class="text-lg text-slate-600 mb-8">
+              Elevate your business with cutting-edge digital solutions that
+              drive growth and innovation.
+            </p>
+            <button
+              class="bg-indigo-600 text-white px-8 py-4 rounded-lg font-medium hover:bg-indigo-700 transition-all hover:shadow-lg hover:-translate-y-1"
+            >
+              Get Started
+            </button>
+          </div>
+          <div class="animate-slide-in-right opacity-0 animation-delay-300">
+            <div
+              class="relative bg-gradient-to-br from-indigo-100 to-blue-50 rounded-2xl p-8 h-96 overflow-hidden"
+            >
+              <!-- 3D Web Development SVG Illustration -->
+              <svg
+                viewBox="0 0 800 600"
+                class="absolute inset-0 w-full h-full opacity-90"
+                style="transform: rotate(-5deg) scale(1.1)"
+              >
+                <!-- Laptop Base -->
+                <path
+                  d="M200 450L600 450 550 500 250 500z"
+                  fill="#4f46e5"
+                  class="shadow-xl"
+                />
+
+                <!-- Laptop Screen -->
+                <path
+                  d="M150 200L650 200 600 400 200 400z"
+                  fill="url(#screenGradient)"
+                  stroke="#3730a3"
+                  stroke-width="2"
+                />
+
+                <!-- Code Brackets -->
+                <path
+                  d="M300 280L280 300 320 320zM500 280L520 300 480 320z"
+                  fill="#818cf8"
+                />
+
+                <!-- Code Lines -->
+                <g fill="#a5b4fc" font-family="monospace" font-size="24">
+                  <text x="250" y="300">&lt;div&gt;</text>
+                  <text x="280" y="340">&lt;Component /&gt;</text>
+                  <text x="250" y="380">&lt;/div&gt;</text>
+                </g>
+
+                <!-- Gradient Definition -->
+                <defs>
+                  <linearGradient
+                    id="screenGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: #6366f1; stop-opacity: 1"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: #4338ca; stop-opacity: 1"
+                    />
+                  </linearGradient>
+
+                  <!-- 3D Effect Filter -->
+                  <filter id="shadow">
+                    <feDropShadow
+                      dx="5"
+                      dy="5"
+                      stdDeviation="3"
+                      flood-color="#3730a3"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+
+              <!-- Floating Elements -->
+              <div class="absolute top-16 left-16 animate-float">
+                <svg viewBox="0 0 100 100" class="w-20 h-20 text-indigo-300">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    fill="currentColor"
+                    opacity="0.3"
+                  />
+                </svg>
+              </div>
+
+              <!-- Interactive Glow Effect -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-white/20 to-indigo-200/10 backdrop-blur-sm"
+              ></div>
+            </div>
+          </div>
+
+          <style>
+            @keyframes float {
+              0%,
+              100% {
+                transform: translateY(0);
+              }
+              50% {
+                transform: translateY(-20px);
+              }
+            }
+            .animate-float {
+              animation: float 6s ease-in-out infinite;
+            }
+
+            /* Add depth effect on hover */
+            .group:hover .perspective-effect {
+              transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+            }
+          </style>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Feature Card 1 -->
+            <div
+              class="group p-8 rounded-xl bg-white hover:bg-slate-50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 mb-6 rounded-lg bg-indigo-100 flex items-center justify-center group-hover:bg-indigo-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-indigo-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-800 mb-4">
+                Innovative Solutions
+              </h3>
+              <p class="text-slate-600">
+                Harness the power of modern technology to drive your business
+                forward.
+              </p>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div
+              class="group p-8 rounded-xl bg-white hover:bg-slate-50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 mb-6 rounded-lg bg-emerald-100 flex items-center justify-center group-hover:bg-emerald-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-800 mb-4">
+                Data Analytics
+              </h3>
+              <p class="text-slate-600">
+                Make informed decisions with real-time data and advanced
+                analytics.
+              </p>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div
+              class="group p-8 rounded-xl bg-white hover:bg-slate-50 transition-all duration-300 hover:shadow-lg cursor-pointer"
+            >
+              <div
+                class="w-12 h-12 mb-6 rounded-lg bg-amber-100 flex items-center justify-center group-hover:bg-amber-200 transition-colors"
+              >
+                <svg
+                  class="w-6 h-6 text-amber-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-800 mb-4">
+                Security First
+              </h3>
+              <p class="text-slate-600">
+                Enterprise-grade security protecting your digital assets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--what we do first-->
+      <section class="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-16 animate-fade-in-up opacity-0">
+            <h2 class="text-4xl font-bold text-slate-800 mb-4">
+              Our
+              <span
+                class="bg-gradient-to-r from-indigo-600 to-emerald-600 bg-clip-text text-transparent"
+                >Expertise</span
+              >
+            </h2>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+              Delivering premium digital solutions that combine innovation with
+              cost-effectiveness
+            </p>
+          </div>
+
+          <!-- Services Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Software Development -->
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 rounded-lg bg-indigo-100 flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-indigo-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-800 mb-4">
+                Enterprise Software Solutions
+              </h3>
+              <p class="text-slate-600 mb-6">
+                High-performance applications at competitive pricing
+              </p>
+              <div
+                class="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full text-sm inline-block"
+              >
+                Cost-Effective Scaling
+              </div>
+            </div>
+
+            <!-- Digital Presence -->
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 rounded-lg bg-emerald-100 flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-emerald-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-800 mb-4">
+                Digital Presence Suite
+              </h3>
+              <ul class="text-slate-600 space-y-3 mb-6">
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  Brand-Centric Mobile Applications
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  Modern Web Experiences
+                </li>
+                <li class="flex items-center">
+                  <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
+                  Targeted Digital Marketing
+                </li>
+              </ul>
+              <div
+                class="bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm inline-block"
+              >
+                Full Brand Integration
+              </div>
+            </div>
+
+            <!-- Partnership -->
+            <div
+              class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 rounded-lg bg-amber-100 flex items-center justify-center"
+              >
+                <svg
+                  class="w-6 h-6 text-amber-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-slate-800 mb-4">
+                Strategic Partnership
+              </h3>
+              <p class="text-slate-600 mb-6">
+                3ITI Online - Your end-to-end digital transformation partner
+              </p>
+              <div class="space-y-2">
+                <span
+                  class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm mr-2"
+                  >Software 5ITI</span
+                >
+                <span
+                  class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm"
+                  >3ITI Certified</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Footer -->
+          <div class="mt-16 text-center border-t border-slate-200 pt-12">
+            <p class="text-sm text-slate-500 font-medium">
+              Transform your digital strategy with
+              <span class="text-indigo-600">3ITI Online</span> •
+              Enterprise-grade solutions since 2023
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="/src/script.js"></script>
+  </body>
+</html>
