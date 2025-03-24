@@ -17,16 +17,28 @@
     <header>
       <!-- Navbar -->
       <nav
-        class="fixed top-0 w-full bg-white shadow-md p-6 h-20 flex justify-between items-center z-50"
+        class="fixed top-0 left-0 right-0 w-full bg-white shadow-md p-6 h-20 flex justify-between items-center z-50 backdrop-blur-md"
       >
-        <div class="text-xl font-bold">CodeFaster</div>
-        <button id="menu-btn" class="lg:hidden text-xl">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <!-- Brand Logo -->
+        <div class="flex">
+          <div
+            class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"
+          >
+            <span class="text-white font-bold text-xl">CF</span>
+          </div>
+          <span
+            class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent pl-2.5 pt-0.5"
+          >
+            CodeFaster
+          </span>
+        </div>
+
+        <!--desktop nevigation-->
         <ul class="hidden lg:flex space-x-6">
           <li><a href="#home" class="hover:text-blue-500">Home</a></li>
-          <li><a href="#about" class="hover:text-blue-500">About</a></li>
-
+          <li>
+            <a href="/src/about.html" class="hover:text-blue-500">About</a>
+          </li>
           <!-- Services Link -->
           <li class="relative">
             <a
@@ -40,11 +52,15 @@
               ></i>
             </a>
           </li>
-
           <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
         </ul>
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="lg:hidden text-xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
         <button
-          class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+          class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 hidden lg:block"
         >
           Call Now
         </button>
@@ -215,7 +231,78 @@
           </div>
         </div>
       </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden fixed top-20 left-0 right-0 bg-white shadow-lg z-40 max-h-0 overflow-hidden transition-all duration-300"
+      >
+        <div class="px-4 py-6 space-y-4">
+          <a href="#home" class="block py-2 px-4 hover:bg-gray-50 rounded-lg"
+            >Home</a
+          >
+          <a
+            href="/src/about.html"
+            class="block py-2 px-4 hover:bg-gray-50 rounded-lg"
+            >About</a
+          >
+
+          <!-- Services Accordion -->
+          <div class="border-b pb-4">
+            <button
+              id="mobile-services-btn"
+              class="w-full flex justify-between items-center py-2 px-4 hover:bg-gray-50 rounded-lg"
+            >
+              <span>Services</span>
+              <i
+                class="fa-solid fa-chevron-down text-sm transition-transform"
+              ></i>
+            </button>
+            <div
+              id="mobile-services-menu"
+              class="pl-6 mt-2 space-y-4 max-h-0 overflow-hidden transition-all duration-300"
+            >
+              <!-- Mobile Services Content -->
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h3 class="font-semibold mb-2">Web Development</h3>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm"
+                    >React</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm"
+                    >Next.js</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm"
+                    >Angular</span
+                  >
+                </div>
+              </div>
+              <!-- Repeat for other services -->
+            </div>
+          </div>
+
+          <a href="#contact" class="block py-2 px-4 hover:bg-gray-50 rounded-lg"
+            >Contact</a
+          >
+          <button
+            class="w-full px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+          >
+            Call Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Desktop Mega Menu -->
+      <div
+        id="mega-menu"
+        class="hidden lg:block fixed left-0 right-0 top-20 bg-gradient-to-b from-blue-50 to-indigo-50 shadow-2xl opacity-0 invisible transition-all duration-300 transform -translate-y-4 z-40 border-t border-gray-100"
+      >
+        <!-- ... (keep existing desktop mega menu content) ... -->
+      </div>
     </header>
+
     <!--main body-->
     <main>
       <!-- Hero Section -->
@@ -744,10 +831,80 @@
           </div>
         </div>
       </section>
+      <!--our team section-->
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="text-4xl font-bold text-slate-800 mb-12 text-center">
+            Leadership
+            <span
+              class="bg-gradient-to-r from-indigo-600 to-emerald-600 bg-clip-text text-transparent"
+            >
+              Team
+            </span>
+          </h2>
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- CEO Card -->
+            <div
+              class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+            >
+              <img
+                src="/src/img/ceo.jpg"
+                alt="ORAN Sk"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800">ORAN SK</h3>
+                <p class="text-indigo-600 mb-2">Founder & CEO</p>
+                <p class="text-gray-600 text-sm">
+                  2+ years experience in enterprise software architecture and
+                  digital strategy
+                </p>
+              </div>
+            </div>
+
+            <!-- DEVELOPER CARD -->
+            <div
+              class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+            >
+              <img
+                src="/src/img/devloper.jpg"
+                alt="AFIF HOSSAIN"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800">AFIF HOSSAIN</h3>
+                <p class="text-emerald-600 mb-2">Fronted & Backend Developer</p>
+                <p class="text-gray-600 text-sm">
+                  Cloud infrastructure expert with focus on scalable solutions
+                </p>
+              </div>
+            </div>
+
+            <!-- COO Card -->
+            <div
+              class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
+            >
+              <img
+                src="/src/img/coo.jpg"
+                alt="Rajnish Vats"
+                class="w-full h-64 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800">Rajnish Vats</h3>
+                <p class="text-blue-600 mb-2">Chief Operations Officer</p>
+                <p class="text-gray-600 text-sm">
+                  Operational excellence and process optimization specialist
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--Doubt / question sectioon-->
       <section class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 py-20">
-          <div class="text-center mb-12 pb-10">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-12">
             <h2 class="text-4xl font-bold text-gray-800 mb-4">
               Have a
               <span
@@ -756,7 +913,7 @@
                 Doubt?
               </span>
             </h2>
-            <p class="text-gray-600 text-lg ">Get answers to common questions</p>
+            <p class="text-gray-600 text-lg">Get answers to common questions</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -854,9 +1011,337 @@
         </div>
       </section>
       <!--testimonal-->
-      
+      <section class="py-24">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="flex flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto"
+          >
+            <div class="w-full lg:w-2/5">
+              <span class="text-sm text-gray-500 font-medium mb-4 block"
+                >Testimonial</span
+              >
+              <h2
+                class="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-8"
+              >
+                23k+ Customers gave their
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-violet-600"
+                  >Feedback</span
+                >
+              </h2>
+              <div
+                class="flex items-center justify-center lg:justify-start gap-10"
+              >
+                <button
+                  class="swiper-button-prev group flex justify-center items-center border border-indigo-600 w-12 h-12 mt-8 rounded-lg hover:bg-indigo-600 transition-all duration-500"
+                >
+                  <svg
+                    class="h-6 w-6 text-indigo-600 group-hover:text-white"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="swiper-button-next group flex justify-center items-center border border-indigo-600 w-12 h-12 mt-8 rounded-lg hover:bg-indigo-600 transition-all duration-500"
+                >
+                  <svg
+                    class="h-6 w-6 text-indigo-600 group-hover:text-white"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 12L19 12M14 18L19.2929 12.7071C19.6262 12.3738 19.7929 12.2071 19.7929 12C19.7929 11.7929 19.6262 11.6262 19.2929 11.2929L14 6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="w-full lg:w-3/5">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide group bg-white border border-gray-300 rounded-2xl max-sm:max-w-sm max-sm:mx-auto p-6 transition-all duration-500 hover:border-indigo-600"
+                  >
+                    <div class="flex items-center gap-5 mb-5 sm:mb-9">
+                      <img
+                        class="rounded-full object-cover"
+                        src="https://pagedone.io/asset/uploads/1696229969.png"
+                        alt="avatar"
+                      />
+                      <div class="grid gap-1">
+                        <h5
+                          class="text-gray-900 font-medium transition-all duration-500 group-hover:text-indigo-600"
+                        >
+                          Jane D
+                        </h5>
+                        <span class="text-sm leading-6 text-gray-500">CEO</span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex items-center mb-5 sm:mb-9 gap-2 text-amber-500 transition-all duration-500"
+                    >
+                      <!-- Rating stars SVG remain unchanged -->
+                    </div>
+                    <p
+                      class="text-sm text-gray-500 leading-6 transition-all duration-500 min-h-24 group-hover:text-gray-800"
+                    >
+                      The user interface of this pagedone is so intuitive, I was
+                      able to start using it without any guidance.
+                    </p>
+                  </div>
+                  <!-- Repeat for other slides, ensuring consistency -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+
+    <!--footer section-->
+    <footer class="bg-[#0F172A] text-gray-300 pt-20 pb-12 z-40">
+      <div class="max-w-7xl mx-auto px-4 xl:px-0">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
+          <!-- Brand Column -->
+          <div class="md:col-span-4 lg:col-span-3 space-y-6">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"
+              >
+                <span class="text-white font-bold text-xl">CF</span>
+              </div>
+              <span
+                class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+              >
+                CodeFaster
+              </span>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Accelerating digital transformation through innovative solutions
+              and cutting-edge technology.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-500 transition-colors"
+              >
+                <i
+                  class="fab fa-linkedin-in text-lg text-gray-400 hover:text-white"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-500 transition-colors"
+              >
+                <i
+                  class="fab fa-twitter text-lg text-gray-400 hover:text-white"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-cyan-500 transition-colors"
+              >
+                <i
+                  class="fab fa-github text-lg text-gray-400 hover:text-white"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Solutions Column -->
+          <div class="md:col-span-2 lg:col-span-2">
+            <h4
+              class="text-sm font-semibold text-white uppercase mb-6 tracking-wider"
+            >
+              Solutions
+            </h4>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Web Platforms</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Cloud Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >UI/UX Design</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company Column -->
+          <div class="md:col-span-2 lg:col-span-2">
+            <h4
+              class="text-sm font-semibold text-white uppercase mb-6 tracking-wider"
+            >
+              Company
+            </h4>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Case Studies</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Resources Column -->
+          <div class="md:col-span-2 lg:col-span-2">
+            <h4
+              class="text-sm font-semibold text-white uppercase mb-6 tracking-wider"
+            >
+              Resources
+            </h4>
+            <ul class="space-y-4">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  >Partners</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter Column -->
+          <div class="md:col-span-4 lg:col-span-3">
+            <div
+              class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700"
+            >
+              <h4
+                class="text-sm font-semibold text-white uppercase mb-4 tracking-wider"
+              >
+                Stay Updated
+              </h4>
+              <p class="text-gray-400 text-sm mb-5">
+                Join our newsletter for tech insights and updates.
+              </p>
+              <form class="space-y-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  class="w-full px-4 py-3 bg-slate-800 rounded-lg border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 outline-none text-sm"
+                />
+                <button
+                  type="submit"
+                  class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg transition-all text-sm font-medium"
+                >
+                  Subscribe Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-slate-800 my-8"></div>
+
+        <!-- Bottom Bar -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400"
+        >
+          <div class="order-2 md:order-1">
+            © 2024 CodeFaster. All rights reserved.
+          </div>
+          <div class="order-1 md:order-2 flex gap-6">
+            <a href="#" class="hover:text-cyan-400 transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-cyan-400 transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-cyan-400 transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--link js-->
     <script src="/src/script.js"></script>
+    <!--link to swiper js to slid tesimonial-->
+    <script src="/src/swiper.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        // ... configuration ...
+      });
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
