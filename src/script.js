@@ -81,3 +81,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Function to handle question and answer toggling
+function setupQuestionToggle(questionSelector, answerSelector, answerText) {
+  const question = document.querySelector(questionSelector);
+  const answer = document.querySelector(answerSelector);
+
+  question.addEventListener("click", () => {
+    if (answer.innerHTML.trim() === "") {
+      answer.innerHTML = `<p class="text-gray-600">${answerText}</p>`;
+    } else {
+      answer.innerHTML = ""; // Hide answer on second click
+    }
+  });
+}
+
+// Define questions and answers
+const faqData = [
+  {
+    question: ".first-qb",
+    answer: ".added-text",
+    text: "codeFaster provides one-stop solution for Websites, mobile apps and digital marketing for your brand.",
+  },
+  {
+    question: ".scond-qb",
+    answer: ".added-text-scond",
+    text: "You can contact CodeFaster on our mail contact@codeFaster or visit contact Page.",
+  },
+  {
+    question: ".thard-qb",
+    answer: ".added-text-thard",
+    text: "Currently codeFaster have 1 office: rampurhat(birbhum)",
+  },
+  {
+    question: ".four-qb",
+    answer: ".added-text-four",
+    text: "We offer mobile app development, web solutions, cloud services, UI/UX design, and digital marketing services.",
+  },
+];
+
+// Initialize event listeners
+faqData.forEach((faq) =>
+  setupQuestionToggle(faq.question, faq.answer, faq.text)
+);
+
+//email handal pop-up sms
+document.getElementById(pop-up).addEventListener("click", ()=>{
+console.log("hello word")
+});
