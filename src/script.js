@@ -142,6 +142,7 @@ document.getElementById("mysubmit").onclick = function pop(e) {
     inputField.value = ""; // Clear the input
   }
 };
+
 // gmail submit and pop-up handeling function
 function popUp() {
   document.getElementById("container").innerHTML = `
@@ -188,13 +189,15 @@ function popUp() {
     </div>
   </div>
 `;
+
   // get sumbit button
   document.getElementById("pop-up").addEventListener("click", function (e) {
     e.preventDefault();
     // Remove all content inside the container (including the pop-up)
     document.getElementById("container").innerHTML = "";
   });
-}
+};
+
 //our team section
 document.addEventListener("DOMContentLoaded", () => {
   const ourteams = [
@@ -241,6 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inputcl.appendChild(teamdiv);
   });
 });
+
 //testimonial content
 document.addEventListener("DOMContentLoaded", function () {
   const testimonials = [
