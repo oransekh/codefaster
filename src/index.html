@@ -29,17 +29,12 @@
         class="fixed top-0 left-0 right-0 w-full bg-white shadow-md p-6 h-20 flex justify-between items-center z-50 backdrop-blur-md"
       >
         <!-- Brand Logo -->
-        <div class="flex">
-          <div
-            class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"
-          >
-            <span class="text-white font-bold text-xl">CF</span>
-          </div>
-          <span
-            class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent pl-2.5 pt-0.5"
-          >
-            CodeFaster
-          </span>
+        <div class="flex items-center">
+          <img
+            src="/src/img/img.png"
+            alt="CodeFaster Logo"
+            class="w-auto h-8 rounded-lg"
+          />
         </div>
 
         <!--desktop nevigation-->
@@ -364,49 +359,8 @@
 
     <!--main body-->
     <main>
-      <!--popup sms-->
-      <div
-        class="fixed inset-0 bg-opacity-20 backdrop-blur-sm flex items-center hidden justify-center z-50"
-      >
-        <div class="bg-white rounded-lg p-6 max-w-sm w-full mx-4 shadow-xl">
-          <div class="text-center">
-            <!-- Checkmark icon -->
-            <div
-              class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
-            >
-              <svg
-                class="h-6 w-6 text-green-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-
-            <!-- Message -->
-            <h3 class="mt-4 text-lg font-medium text-gray-900">
-              Successfully removed product.
-            </h3>
-
-            <!-- Continue button -->
-            <div class="mt-6">
-              <button
-                type="button"
-                class="inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm transition-colors"
-                id="pop-up"
-              >
-                Continue
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!--pop-up-->
+      <div id="container"></div>
 
       <!-- Hero Section -->
       <section class="pt-32 pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -615,6 +569,7 @@
           </div>
         </div>
       </section>
+
       <!--what we do first-->
       <section class="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -755,6 +710,7 @@
           </div>
         </div>
       </section>
+
       <!--our sarvices section-->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
@@ -934,6 +890,7 @@
           </div>
         </div>
       </section>
+
       <!--our team section-->
       <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -945,64 +902,16 @@
               Team
             </span>
           </h2>
-          <div class="grid md:grid-cols-3 gap-8">
+          <div class="grid md:grid-cols-3 gap-8" id="myteam">
             <!-- CEO Card -->
-            <div
-              class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-            >
-              <img
-                src="/src/img/ceo.jpg"
-                alt="ORAN Sk"
-                class="w-full h-64 object-cover"
-              />
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-slate-800">ORAN SK</h3>
-                <p class="text-indigo-600 mb-2">Founder & CEO</p>
-                <p class="text-gray-600 text-sm">
-                  2+ years experience in enterprise software architecture and
-                  digital strategy
-                </p>
-              </div>
-            </div>
 
             <!-- DEVELOPER CARD -->
-            <div
-              class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-            >
-              <img
-                src="/src/img/devloper.jpg"
-                alt="AFIF HOSSAIN"
-                class="w-full h-64 object-cover"
-              />
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-slate-800">AFIF HOSSAIN</h3>
-                <p class="text-emerald-600 mb-2">Fronted & Backend Developer</p>
-                <p class="text-gray-600 text-sm">
-                  Cloud infrastructure expert with focus on scalable solutions
-                </p>
-              </div>
-            </div>
 
             <!-- COO Card -->
-            <div
-              class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden"
-            >
-              <img
-                src="/src/img/coo.jpg"
-                alt="Rajnish Vats"
-                class="w-full h-64 object-cover"
-              />
-              <div class="p-6">
-                <h3 class="text-xl font-bold text-slate-800">Rajnish Vats</h3>
-                <p class="text-blue-600 mb-2">Chief Operations Officer</p>
-                <p class="text-gray-600 text-sm">
-                  Operational excellence and process optimization specialist
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
+
       <!--Doubt / question sectioon-->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
@@ -1107,6 +1016,7 @@
           </div>
         </div>
       </section>
+
       <!--testimonal-->
       <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1114,7 +1024,7 @@
             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
               Trusted by Thousands of
               <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"
+                class="bg-gradient-to-r from-indigo-600 to-emerald-600 bg-clip-text text-transparent"
               >
                 Happy Clients
               </span>
@@ -1124,82 +1034,7 @@
               saying
             </p>
           </div>
-          <div class="owl-carousel owl-theme py-8 px-4">
-            <div
-              class="bg-white rounded-xl p-8 transition-all duration-300 hover:shadow-xl"
-            >
-              <div class="flex items-center mb-6">
-                <img
-                  class="w-14 h-14 rounded-full object-cover"
-                  src="https://via.placeholder.com/150"
-                  alt="Sarah Johnson"
-                />
-                <div class="ml-4">
-                  <h3 class="text-lg font-semibold text-gray-900">
-                    Sarah Johnson
-                  </h3>
-                  <p class="text-sm text-gray-500">CEO, Tech Solutions</p>
-                </div>
-              </div>
-              <blockquote class="text-gray-600 relative">
-                <p class="relative z-10">
-                  The service exceeded all our expectations. Their team
-                  delivered exceptional results that helped us scale our
-                  business exponentially. Highly recommended!
-                </p>
-              </blockquote>
-            </div>
-            <div
-              class="bg-white rounded-xl p-8 transition-all duration-300 hover:shadow-xl"
-            >
-              <div class="flex items-center mb-6">
-                <img
-                  class="w-14 h-14 rounded-full object-cover"
-                  src="https://via.placeholder.com/150"
-                  alt="Michael Chen"
-                />
-                <div class="ml-4">
-                  <h3 class="text-lg font-semibold text-gray-900">
-                    Michael Chen
-                  </h3>
-                  <p class="text-sm text-gray-500">CTO, Digital Innovations</p>
-                </div>
-              </div>
-              <blockquote class="text-gray-600 relative">
-                <p class="relative z-10">
-                  Incredible attention to detail and proactive communication.
-                  They transformed our digital presence completely within just 3
-                  months. Truly outstanding work!
-                </p>
-              </blockquote>
-            </div>
-            <div
-              class="bg-white rounded-xl p-8 transition-all duration-300 hover:shadow-xl"
-            >
-              <div class="flex items-center mb-6">
-                <img
-                  class="w-14 h-14 rounded-full object-cover"
-                  src="https://via.placeholder.com/150"
-                  alt="Emma Wilson"
-                />
-                <div class="ml-4">
-                  <h3 class="text-lg font-semibold text-gray-900">
-                    Emma Wilson
-                  </h3>
-                  <p class="text-sm text-gray-500">
-                    Marketing Director, Global Corp
-                  </p>
-                </div>
-              </div>
-              <blockquote class="text-gray-600 relative">
-                <p class="relative z-10">
-                  Their strategic approach and technical expertise helped us
-                  achieve 3x ROI in the first quarter itself. A truly
-                  collaborative and results-driven partner.
-                </p>
-              </blockquote>
-            </div>
-          </div>
+          <div class="owl-carousel owl-theme px-4"></div>
         </div>
       </section>
     </main>
@@ -1210,17 +1045,13 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16">
           <!-- Brand Column -->
           <div class="md:col-span-4 lg:col-span-3 space-y-6">
-            <div class="flex items-center gap-3">
-              <div
-                class="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"
-              >
-                <span class="text-white font-bold text-xl">CF</span>
-              </div>
-              <span
-                class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
-              >
-                CodeFaster
-              </span>
+            <!-- Brand Logo -->
+            <div class="flex items-center">
+              <img
+                src="/src/black color new.png"
+                alt="CodeFaster Logo"
+                class="w-auto h-8 rounded-lg"
+              />
             </div>
             <p class="text-gray-400 text-sm leading-relaxed">
               Accelerating digital transformation through innovative solutions
@@ -1386,11 +1217,13 @@
               </p>
               <form class="space-y-4">
                 <input
+                  id="username"
                   type="email"
                   placeholder="Enter your email"
                   class="w-full px-4 py-3 bg-slate-800 rounded-lg border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 outline-none text-sm"
                 />
                 <button
+                  id="mysubmit"
                   type="submit"
                   class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg transition-all text-sm font-medium"
                 >
@@ -1425,29 +1258,11 @@
         </div>
       </div>
     </footer>
+
     <!--link js-->
     <script src="/src/script.js"></script>
     <!--link owl-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          margin: 10,
-          nav: false,
-          dots: true,
-          dotsEach: false,
-          autoplay: true,
-          autoplayTimeout: 3000,
-          autoplayHoverPause: true,
-          responsive: {
-            0: { items: 1 },
-            600: { items: 2 },
-            1000: { items: 3 },
-          },
-        });
-      });
-    </script>
   </body>
 </html>
