@@ -82,6 +82,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//auto counting
+document.addEventListener("DOMContentLoaded", async () => {
+  const counters = document.querySelectorAll(".counter");
+
+  const startCounter = async (counter) => {
+    counter.innerText = "0";
+    const target = +counter.getAttribute("data-target"); // Get target value
+    const increment = target / 100; // Define step increment
+
+    const updateCounter = async () => {
+      const current = +counter.innerText; // Get current number
+      if (current < target) {
+        counter.innerText = `${Math.ceil(current + increment)}`; // Increase count
+        await new Promise((resolve) => setTimeout(resolve, 20)); // Async delay
+        await updateCounter(); // Recursive call
+      } else {
+        counter.innerText = target; // Stop at target value
+      }
+    };
+
+    await updateCounter(); // Start updating the counter
+  };
+
+  // Start all counters asynchronously
+  counters.forEach(async (counter) => await startCounter(counter));
+});
+
 // Function to handle question and answer toggling
 function setupQuestionToggle(questionSelector, answerSelector, answerText) {
   const question = document.querySelector(questionSelector);
@@ -196,7 +223,7 @@ function popUp() {
     // Remove all content inside the container (including the pop-up)
     document.getElementById("container").innerHTML = "";
   });
-};
+}
 
 //our team section
 document.addEventListener("DOMContentLoaded", () => {
@@ -317,3 +344,4 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 });
+
