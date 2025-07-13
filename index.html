@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CodeFaster.in</title>
     <!--link to tailwind css-->
-    <link href="/src/output.css" rel="stylesheet" />
+    <link href="./output.css" rel="stylesheet" />
     <!--link custom css file-->
-    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -40,10 +40,10 @@
         <!--desktop nevigation-->
         <ul class="hidden lg:flex space-x-6">
           <li>
-            <a href="/src/index.html" class="hover:text-blue-500">Home</a>
+            <a href="./index.html" class="hover:text-blue-500">Home</a>
           </li>
           <li>
-            <a href="/src/about.html" class="hover:text-blue-500">About</a>
+            <a href="./about.html" class="hover:text-blue-500">About</a>
           </li>
           <!-- Services Link -->
           <li class="relative">
@@ -59,7 +59,7 @@
             </a>
           </li>
           <li>
-            <a href="/src/contact.html" class="hover:text-blue-500">Contact</a>
+            <a href="./contact.html" class="hover:text-blue-500">Contact</a>
           </li>
         </ul>
         <!-- Mobile Menu Button -->
@@ -68,7 +68,7 @@
         </button>
 
         <button
-          class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 hidden lg:block"
+          class="callnow px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 hidden lg:block"
         >
           Call Now
         </button>
@@ -343,7 +343,7 @@
             >Contact</a
           >
           <button
-            class="w-full px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+            class="callnow w-full px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
           >
             Call Now
           </button>
@@ -359,6 +359,32 @@
 
     <!--main body-->
     <main>
+      <!-- Call Now Button -->
+      <button
+        class="callnow bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:scale-105 transition"
+      >
+        📞 Call Now
+      </button>
+
+      <!-- Phone Popup -->
+      <div
+        id="phone-popup"
+        class="fixed top-1/3 left-1/2 transform -translate-x-1/2 bg-white border border-blue-200 shadow-xl rounded-xl px-6 py-5 w-80 z-50 hidden"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold text-gray-700">Call Now</h2>
+          <button
+            id="close-popup"
+            class="text-gray-400 hover:text-red-500 text-xl font-bold"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="text-center text-gray-700 text-lg font-bold tracking-wide">
+          📞 90225566555
+        </p>
+      </div>
+
       <!--pop-up-->
       <div id="container"></div>
 
@@ -1218,8 +1244,6 @@
 
               <!-- SheetDB API Script -->
               <script src="https://sheetdb.io/s/f/xn9ac08q7abx3.js"></script>
-
-              
             </div>
           </div>
         </div>
@@ -1250,7 +1274,7 @@
     </footer>
 
     <!--link js-->
-    <script src="/src/script.js"></script>
+    <script src="script.js"></script>
     <!--link owl-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

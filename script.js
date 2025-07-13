@@ -152,79 +152,6 @@ faqData.forEach((faq) =>
   setupQuestionToggle(faq.question, faq.answer, faq.text)
 );
 
-// email handal pop-up sms
-document.getElementById("mysubmit").onclick = function pop(e) {
-  e.preventDefault();
-  const inputField = document.getElementById("username"); // Get input field
-  const inputValue = inputField.value.trim(); // Get input value and remove spaces
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email validation regex
-
-  if (inputValue === "") {
-    inputField.placeholder = "Enter valid email"; // Change placeholder text
-  } else if (!emailPattern.test(inputValue)) {
-    inputField.value = ""; // Clear the input
-    inputField.placeholder = "Enter valid email"; // Update placeholder
-  } else {
-    popUp();
-    inputField.value = ""; // Clear the input
-  }
-};
-
-// gmail submit and pop-up handeling function
-function popUp() {
-  document.getElementById("container").innerHTML = `
-  <!-- Popup SMS -->
-  <div
-    class="fixed inset-0 bg-opacity-20 backdrop-blur-sm hidden items-center justify-center z-50"
-    id="demo"
-  >
-    <div class="bg-white rounded-lg p-6 max-w-sm w-full mx-4 shadow-xl">
-      <div class="text-center">
-        <!-- Checkmark icon -->
-        <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-          <svg
-            class="h-6 w-6 text-green-600"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
-        </div>
-
-        <!-- Message -->
-        <h3 class="mt-4 text-lg font-medium text-gray-900">
-          Thank you <span>&#128522;</span>
-        </h3>
-
-        <!-- Continue button -->
-        <div class="mt-6">
-          <button
-            type="button"
-            class="inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:text-sm transition-colors"
-            id="pop-up"
-          >
-            Continue
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-`;
-
-  // get sumbit button
-  document.getElementById("pop-up").addEventListener("click", function (e) {
-    e.preventDefault();
-    // Remove all content inside the container (including the pop-up)
-    document.getElementById("container").innerHTML = "";
-  });
-}
-
 //our team section
 document.addEventListener("DOMContentLoaded", () => {
   const ourteams = [
@@ -345,3 +272,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Loop through all elements with class "callnow"
+document.querySelectorAll(".callnow").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.getElementById("phone-popup").classList.remove("hidden");
+  });
+});
+
+// Close popup when 'X' button is clicked
+document.getElementById("close-popup").addEventListener("click", () => {
+  document.getElementById("phone-popup").classList.add("hidden");
+});
