@@ -59,7 +59,7 @@
             </a>
           </li>
           <li>
-            <a href="/src/contact.html" class="hover:text-blue-500">Contact</a>
+            <a href="./contact.html" class="hover:text-blue-500">Contact</a>
           </li>
         </ul>
         <!-- Mobile Menu Button -->
@@ -73,6 +73,7 @@
           Call Now
         </button>
       </nav>
+
       <!-- Mega Menu -->
       <div
         id="mega-menu"
@@ -246,12 +247,12 @@
       >
         <div class="px-4 py-6 space-y-4">
           <a
-            href="/src/index.html"
+            href="./index.html"
             class="block py-2 px-4 hover:bg-gray-50 rounded-lg"
             >Home</a
           >
           <a
-            href="/src/about.html"
+            href="./about.html"
             class="block py-2 px-4 hover:bg-gray-50 rounded-lg"
             >About</a
           >
@@ -338,12 +339,12 @@
           </div>
 
           <a
-            href="/src/contact.html"
+            href="./contact.html"
             class="block py-2 px-4 hover:bg-gray-50 rounded-lg"
             >Contact</a
           >
           <button
-            class="w-full px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
+            class="callnow w-full px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
           >
             Call Now
           </button>
@@ -359,6 +360,32 @@
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <!-- Call Now Button -->
+      <button
+        class="callnow bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:scale-105 transition"
+      >
+        📞 Call Now
+      </button>
+
+      <!-- Phone Popup -->
+      <div
+        id="phone-popup"
+        class="fixed top-1/3 left-1/2 transform -translate-x-1/2 bg-white border border-blue-200 shadow-xl rounded-xl px-6 py-5 w-80 z-50 hidden"
+      >
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-semibold text-gray-700">Call Now</h2>
+          <button
+            id="close-popup"
+            class="text-gray-400 hover:text-red-500 text-xl font-bold"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="text-center text-gray-700 text-lg font-bold tracking-wide">
+          📞 90225566555
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 py-16">
         <!-- Contact Information -->
         <div class="space-y-8">
@@ -607,7 +634,7 @@
             <!-- Brand Logo -->
             <div class="flex items-center">
               <img
-                src="/src/black color new.png"
+                src="./black color new.png"
                 alt="CodeFaster Logo"
                 class="w-auto h-8 rounded-lg"
               />
@@ -816,7 +843,7 @@
       </div>
     </footer>
     <!--link js-->
-    <script src="/src/script.js"></script>
+    <script src="./script.js"></script>
     <!--link owl-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
